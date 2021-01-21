@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>
+            Create User
+        </Title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded'">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" size="30" maxlength="12" placeholder="max 12 characters" required><br>
+            <fieldset>
+                <legend>User Form</legend>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" size="30" maxlength="8" placeholder="max 8 characters" required><br>
+                <br>
+                <label for="superhero">Select your favourite superhero</label><br>
+                <input type="radio" name="superhero" value="Superman">Superman<br>
+                <input type="radio" name="superhero" value="Batman" checked="checked"> Batman<br>
+                <input type="radio" name="superhero" value="Wonder Woman">Wonder Woman<br>
+                <input type="radio" name="superhero" value="Flash">Flash<br>
+                <input type="radio" name="superhero" value="Thor">Thor<br>
+                <input type="radio" name="superhero" value="Hulk">Hulk<br>
+                <label for="videogames">Select your favorite video games</label><br>
+                <input type="checkbox" name="videogames" value="Fifa" checked>Fifa<br>
+                <input type="checkbox" name="videogames" value="NHL">NHL<br>
+                <input type="checkbox" name="videogames" value="Resident Evil">Resident Evil<br>
+                <input type="checkbox" name="videogames" value="Uncharted" checked>Uncharted<br>
+                <input type="hidden" name="userid" value="2300">
+                
+                <input type="image" name="login" src="img/register_button.png" width="110" height="50" placeholder="Login">
+
+            </fieldset>
+        </form>
+    </body>
+</html>

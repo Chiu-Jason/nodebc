@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>
+            Create User
+        </Title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="your name" size="30">
+        </form>
+        <br>
+        <form>
+            <Label for="superhero">Your Favorite Superhero Movie(s)</Label><br>
+            <select name="superhero" id="superhero" multiple="multiple"size="5">
+                <option value="deadpool">Deadpool</option>
+                <option value="batman_vs_superman">Batman vs Superman</option>
+                <option value="civil_war">Captain America</option>
+                <option value="doctor_strange">Doctor Strange</option>
+                <option value="suicide_squad">Suicide Squad</option>
+                <option value="apocalypse">X-Men: Apocalypse</option>
+                <option value="gotg_vol2">Guardians of the Galaxy Vol 2 </option>
+                <option value="justice_league">Justice League</option>
+                <option value="logan">Logan </option>
+                <option value="homecoming">Spider-Man: Homecoming</option>
+                <option value="wonder_woman" selected>Wonder Woman</option>
+                <option value="thor_ragnarok">Thor: Ragnarok</option>
+                <option value="black_panther">Black Panther</option>
+            </select>
+        </form>
+        <br>
+        <form>
+            <Label for="bio"></Label>We want to get to know you<br>
+        <textarea name="bio" cols="50" rows="15" placeholder="Tell us something about yourself"></textarea>
+        </form>
+        <br>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <Label for="avatar">Upload your Avatar</Label><br>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpg">
+        </form>
+        <br>
+        <br>
+        <br>
+        <form>
+            <button value="clear" name="clear-form">Clear Form</button>
+            <button value="create" name="add-user">Add New User</button>
+        </form>
+            
+    </body>
+</html>
