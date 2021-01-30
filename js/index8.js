@@ -1,0 +1,10 @@
+const firstName = "Jason";
+const lastName = "Chiu";
+const age = 18;
+const address = "richmond";
+const dateOfBirth = "02/26/2018";
+console.log ("First name: ", firstName);
+console.log ("Last name:", lastName);
+console.log ("Age:", age);
+console.log ("Address:", address);
+console.log ("Date of Birth:", dateOfBirth);
