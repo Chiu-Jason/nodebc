@@ -1,0 +1,17 @@
+const firstNumber = 20;
+const secondNumber = 15;
+const addition = firstNumber + secondNumber;
+const subtraction = firstNumber - secondNumber;
+const multiplication = firstNumber * secondNumber;
+const division = firstNumber / secondNumber;
+const remainder = firstNumber % secondNumber;
+const additionTemplate = `I add ${firstNumber} + ${secondNumber} and the result is ${addition}`;
+const subtractionTemplate = `I subtract ${firstNumber} - ${secondNumber} and the result is ${subtraction}`;
+const multiplicationTemplate = `I multiply ${firstNumber} * ${secondNumber} and the result is ${multiplication}`;
+const divisionTemplate = `I divide ${firstNumber} / ${secondNumber} and the result is ${division}`;
+const remainderTemplate = `I divide ${firstNumber} / ${secondNumber} and the remainder is ${remainder}`;
+console.log(additionTemplate);
+console.log(subtractionTemplate);
+console.log(multiplicationTemplate);
+console.log(divisionTemplate);
+console.log(remainderTemplate);
