@@ -1,7 +1,7 @@
+function sort(number1, number2, number3, highToLow){
 let low;
 let mid;
 let high;
-function sort(number1, number2, number3, highToLow){
     if (number1 > number2 && number1 > number3){
         high = number1;
         if (number2 > number3){
