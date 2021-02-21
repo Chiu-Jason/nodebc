@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let userName = prompt("Please input username");
+        let password = prompt("Please input password");
+        window.alert(`Welcome ${userName}`);
+        let delayedAlert = function () {
+            let beLogged = confirm("Do you still want to be logged?");
+            if (beLogged) {
+                alert(`${userName} your session has been restored`)
+            }
+            else {
+                alert("Your session has expired")
+            }
+        };
+        setTimeout(delayedAlert, 5000);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

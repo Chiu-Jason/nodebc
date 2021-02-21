@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.alert("This Program add all the numbers you input");
+        let total = 0;
+        let toContinue;
+        do {
+            toContinue = window.confirm("Do you want to input a number?");
+            if (toContinue){
+            let number = prompt("Input a number")
+            total += Number(number);
+            alert(`The result so far is ${total}`)};
+        } while (toContinue === true);
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
