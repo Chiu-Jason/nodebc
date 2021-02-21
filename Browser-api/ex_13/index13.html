@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let time = prompt("How many seconds do you want to stay in the site?");
+        let countdown = function(){
+            console.log(time);
+            time--
+            if (time === 0){
+                clearInterval(timeIntervalId);
+                alert ("Your session has expired, come again soon!")
+            }
+        }
+        let timeIntervalId = setInterval(countdown,1000);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
