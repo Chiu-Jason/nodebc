@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Elements</title>
+    <script>
+        window.onload = function () {
+            const firstList = document.querySelector('li');
+            firstList.setAttribute('class', 'orange');
+            const secondList = firstList.nextElementSibling;
+            secondList.setAttribute('class', 'orange');
+            const thirdList = secondList.nextElementSibling;
+            thirdList.setAttribute('class', 'orange');
+            const fourthList = thirdList.nextElementSibling;
+            fourthList.setAttribute('class', 'orange');
+            const fifthList = fourthList.nextElementSibling;
+            fifthList.setAttribute('class', 'orange');
+            fourthList.previousElementSibling.setAttribute('class', 'red');
+            thirdList.previousElementSibling.previousElementSibling.setAttribute('class', 'green');
+            console.log(firstList.parentElement);
+        };
+    </script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .orange {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+</html>
