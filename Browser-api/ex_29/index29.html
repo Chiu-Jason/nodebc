@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let remove;
+        window.onload = function () {
+            const ulElement = document.querySelector('ul');
+            const list1 = ulElement.children[0];
+            const list2 = ulElement.children[1];
+            const list3 = ulElement.children[2];
+            const list4 = ulElement.children[3];
+            const list5 = ulElement.children[4];
+            const list6 = ulElement.children[5];
+            const list7 = ulElement.children[6];
+            remove = function () {
+                let index = prompt('What list number do you want to remove>');
+                ulElement.removeChild(ulElement.children[index]);
+            }
+        };
+    </script>
+    <title>Products</title>
+</head>
+
+<body>
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Peach</li>
+        <li>Eggs</li>
+        <li>Tomatto</li>
+        <li>Lettuce</li>
+        <li>Milk</li>
+    </ul>
+    <button onclick='remove()'>remove</button>
+</body>
+
+</html>

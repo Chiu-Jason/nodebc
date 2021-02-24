@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function(){
+            let ulElement = document.querySelector('ul');
+            ulElement.innerHTML = '<li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li>';
+            console.log(ulElement.children.innerHTML);
+            ulElement.children[2].innerText = 'ITEM 3';
+            ulElement.previousElementSibling.innerHTML = 'These are the items:'
+        };
+    </script>
+  <title>Texts</title>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+  <ul></ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = function () {
+            let body = document.querySelector('body');
+            let name = [
+                'Sasuke',
+                'Naruto',
+                'Boruto',
+                'Sakura',
+                'Ichigo',
+                'Neji',
+                'Lee',
+                'Hinata',
+                'Minato',
+                'Madara'
+            ];
+            let ulElement = document.createElement('ul');
+            let listElement;
+            for (count = 0; count < name.length; count++) {
+                listElement = document.createElement('li');
+                listElement.innerHTML = name[count];
+                ulElement.appendChild(listElement);
+            };
+            body.appendChild(ulElement);
+            console.log(body)
+        };
+    </script>
+    <title>It's all JavaScript Baby!!</title>
+</head>
+
+<body>
+</body>
+
+</html>

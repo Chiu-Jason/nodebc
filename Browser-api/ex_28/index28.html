@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let inputNames;
+        let namesArray = [];
+        window.onload = function () {
+            let body = document.querySelector('body');
+            let oList = document.createElement('ol');
+            inputNames = function () {
+                let names = prompt('Please input name/s')
+                namesArray = names.split(',')
+                namesArray.forEach(function (name) {
+                    let listElement = document.createElement('li');
+                    listElement.innerText = name;
+                    if (namesArray.length % 2 == 0) {
+                        listElement.style.color = 'black';
+                    }
+                    else {
+                        listElement.style.color = 'blue'
+                    };
+                    oList.appendChild(listElement);
+                });
+            };
+            body.appendChild(oList);
+            console.log(body)
+        };
+    </script>
+    <title>It's all JavaScript Baby!!</title>
+</head>
+
+<body>
+    <button onclick="inputNames()">Input Name</button>
+</body>
+
+</html>

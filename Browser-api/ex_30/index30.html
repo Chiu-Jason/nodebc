@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        window.onload = function () {
+            const ulElement = document.querySelector('ul');
+            let lastChild;
+            let index = ulElement.children.length - 1;
+            const remove = function () {
+                lastChild = ulElement.children.item(index);
+                ulElement.removeChild(lastChild)
+                index--
+                if (index < 0) {
+                    clearInterval(delayedRemoval)
+                };
+            };
+                let delayedRemoval = setInterval(remove, 1000);
+            };
+    </script>
+    <title>Products</title>
+</head>
+
+<body>
+    <p>Lists of Fruits available</p>
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Peach</li>
+        <li>Eggs</li>
+        <li>Tomato</li>
+        <li>Lettuce</li>
+        <li>Milk</li>
+    </ul>
+</body>
+
+</html>

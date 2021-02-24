@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = function () {
+            const body = document.querySelector('body');
+            const numbers = [];
+            for (count = 1; count <= 100; count++) {
+                numbers.push(count);
+            };
+            const ulElement = document.createElement('ul');
+            numbers.forEach(function (number) {
+                let listElement = document.createElement('li');
+                listElement.innerHTML = `Item ${number} as li element content`;
+                if (number % 2 == 0) {
+                    listElement.style.color = 'red';
+                    listElement.style.fontWeight = 'bold';
+                    listElement.style.textAlign = 'right'
+                }
+                else {
+                    listElement.style.color = 'blue';
+                };
+                ulElement.appendChild(listElement);
+            });
+            body.appendChild(ulElement);
+            console.log(body)
+        };
+    </script>
+    <title>It's all JavaScript Baby!!</title>
+</head>
+
+<body>
+</body>
+
+</html>
