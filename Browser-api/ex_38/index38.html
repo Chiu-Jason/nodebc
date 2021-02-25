@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Events</title>
+</head>
+
+<body>
+  <div></div>
+  <button id="firstButton">Click Me!!</button>
+  <button id="secondButton">Remove event listener</button>
+  <a href="https://google.com">Link with JavaScript handler</a>
+  <script>
+    const divElement = document.querySelector('div');
+    const bodyElement = document.querySelector('body');
+    const eavesdrop = function (event) {
+      const keyCode = event.charCode;
+      const key = String.fromCharCode(keyCode);
+      const pElement = document.createElement('p');
+      pElement.innerText = `You press the ${key} with the ${keyCode}`;
+      divElement.appendChild(pElement);
+      divElement.style.fontSize = '20px';
+      divElement.style.color = 'red';
+      divElement.style.fontFamily = 'arial';
+      divElement.style.bottomPadding = '20px'
+    };
+    bodyElement.addEventListener('keypress', eavesdrop)
+  </script>
+</body>
+
+</html>

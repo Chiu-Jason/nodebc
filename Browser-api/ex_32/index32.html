@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        window.onload = function () {
+            const button1 = document.getElementById('firstbutton');
+            const noClick = function () {
+                alert("Oh... Don't click Me!!!");
+            };
+            button1.onclick = noClick;
+        }
+    </script>
+    <title>Events</title>
+</head>
+
+<body>
+    <div></div>
+    <button id="firstbutton">Click me!!</button>
+</body>
+
+</html>
