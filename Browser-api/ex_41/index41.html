@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        .striked {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        li {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const bodyElement = document.querySelector('body');
+            const ulElement = document.createElement('ul');
+            const weeklyChores = [
+                "laundry",
+                "pay bills",
+                "wash dishes",
+                "meal prep",
+                "cleaning",
+                "do grocery",
+                "organize stuff",
+                "wash car",
+                "call bchydro",
+                "fold clothes"];
+            weeklyChores.forEach(function (chore) {
+                const liElement = document.createElement('li');
+                liElement.innerText = chore;
+                liElement.addEventListener('click', ()=>{
+                    liElement.classList.toggle('striked');
+                });
+                ulElement.appendChild(liElement);
+            });
+            bodyElement.appendChild(ulElement);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

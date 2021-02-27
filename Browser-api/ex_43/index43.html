@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function(){
+            const form = document.forms[0];
+            const formAction = form.action;
+            const formEncode = form.encoding;
+            const formMethod = form.method;
+            const formName = form.name;
+            const formProp = [];
+            formProp.push(formAction, formEncode, formMethod, formName);
+            console.log(formProp)
+            const divElement = document.querySelector('div');
+            formProp.forEach((prop)=> {
+                const paragraph = document.createElement('p')
+                paragraph.innerText = prop;
+                divElement.appendChild(paragraph);
+            });
+        }
+    </script>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>

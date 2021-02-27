@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    window.onload = function () {
+      let form = document.forms[0]
+      console.log(form.elements);
+      const userName = form.elements[0];
+      const password = form.elements[1];
+      userName.value = 'mortymer';
+      password.value = '12345678';
+      const button = document.querySelector('button');
+      button.onclick = () => {
+        alert(`Username: ${userName.value}, Password: ${password.value}`);
+      };
+    }
+  </script>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+</head>
+
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <button>Show Username and Password</button>
+  </form>
+  <div></div>
+</body>
+
+</html>
