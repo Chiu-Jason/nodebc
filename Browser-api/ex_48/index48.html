@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        window.onload = () => {
+            const form = document.forms[0];
+            const username = form.elements[0];
+            const password = form.elements[1];
+            username.onfocus = (event => username.style.boxShadow = '5px -10px red');
+            password.onfocus = (event => password.style.boxShadow = '5px -10px gray');;
+            username.onblur = (event => username.style.boxShadow = '');
+            password.onblur = (event => password.style.boxShadow = '');
+            form.onsubmit = (event) => {
+                alert(`
+                username:  ${username.value} 
+                password:  ${password.value}`);
+                event.preventDefault();
+
+            };
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Form elements event</title>
+</head>
+
+<body>
+    <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <input type="text" id="username" name="username" />
+        <input type="password" id="pass" name="pass" />
+        <input type="submit" name="submit" value="Send" />
+    </form>
+</body>
+
+</html>
