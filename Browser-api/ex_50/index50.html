@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        window.onload = function validation() {
+            const form = document.forms[0];
+            const userName = document.getElementById('username');
+            const password = document.getElementById('pass');
+            let validate
+            const validateUser = function (userName) {
+                const userRegex = /^[a-z0-9]+$/i;
+                return userRegex.test(userName);
+            }
+            const validatePassword = function (password) {
+                const passRegex = /^[a-z0-9]+$/i;
+                return passRegex.test(password);
+            }
+            const validateEmail = function (email) {
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                return emailRegex.test(email);
+            }
+            form.onsubmit = function (event) {
+                event.preventDefault();
+                if (userName.value.length === 0) {
+                    userName.classList.toggle('error');
+                    alert('Please input username');
+                    return false;
+                };
+                if (password.value.length === 0) {
+                    password.classList.toggle('error');
+                    alert('Please input password');
+                    return false;
+                };
+                if (!validateUser(userName.value)) {
+                    alert('Incorrect username');
+                    return false;
+                }
+                if (!validatePassword(password.value)) {
+                    alert('Incorrect password')
+                    return false;
+                }
+                if (!validateEmail(email.value)) {
+                    alert('incorrect email')
+                    return false;
+                }
+                alert('login authenticated')
+                return true;
+            };
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>Form elements event</title>
+    <style>
+        .error {
+            color: red;
+            background-color: pink;
+            border: 1px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+        <input type="text" id="username" name="username" placeholder="username" />
+        <input type="password" id="pass" name="pass" placeholder="password" />
+        <input type="text" id="email" name="email" placeholder="email" />
+        <input type="submit" name="submit" value="Send" />
+    </form>
+    <div id="errors"></div>
+</body>
+
+</html>
