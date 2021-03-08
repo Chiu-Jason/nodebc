@@ -1,0 +1,15 @@
+const math = require('./math.js');
+const Logger = require('logplease');
+const logger = Logger.create('numbers');
+const number1 = math(2);
+const number2 = math(3);
+const number3 = math(101);
+const number4 = math(201);
+const number5 = math(202);
+const number6 = math(100);
+logger.info(number1);
+logger.info(number2);
+logger.info(number3);
+logger.info(number4);
+logger.info(number5);
+logger.info(number6);
